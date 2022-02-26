@@ -23,11 +23,15 @@ function App(){
         currentList.splice(index,1); // removes the item from the current list
         setTodos(currentList)
     }
-    return (<>
-        {todos.map((todo,i) => <Todo index={i} key={i} todo={todo} remove={removeTodo}/>)}
-        {/* this form allows the user to add an input */}
-        <TodoForm addTodo={addTodo}/>
-    </>);
+    return (
+    <div className="app">
+        <div className="todo-list">
+            {todos.map((todo,i) => <Todo index={i} key={i} todo={todo} remove={removeTodo}/>)}
+            {/* this form allows the user to add an input */}
+            <TodoForm addTodo={addTodo}/>
+        </div>
+    </div>
+    );
 }
 ReactDOM.render(
     <App/>,
