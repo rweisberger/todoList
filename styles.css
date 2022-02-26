@@ -45,6 +45,11 @@ h1 {
     align-items: center;
     justify-content: space-between;
   }
+  .todo:hover{ 
+    cursor: grab;
+    background-color: rgb(255, 58, 133);
+    opacity: 50%;
+  }
   
   .input{
     width: 100%;
